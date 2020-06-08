@@ -71,6 +71,7 @@ Added Default descisions for radio buttons
 
 Fixed Bugs:
 Fixed running and jump shooting bug where the spell would go straight up
+Fixed Background image link issues
 
 **/
 function main () { 
@@ -232,7 +233,6 @@ function main () {
   
     game.addDrawing(function ({ctx,elapsed}) {
       ctx.fillStyle = 'white'
-      ctx.drawImage(background_src,0,0,rwall+50,floor+50)// draws the background
       if (first_time == 0) {
         player2.key_state[1] = false
         player1.key_state[2] = false

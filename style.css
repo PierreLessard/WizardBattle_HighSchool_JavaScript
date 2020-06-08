@@ -45,16 +45,6 @@ body {
   margin-left: -80px;
 }
 
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 20%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
 
 .popup .show {
   visibility: visible;

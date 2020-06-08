@@ -53,7 +53,27 @@ Fixed healthbar bugs
 I met most of the publishing requirements, however I didnt complete of instructions button.
 I still have one bug that i need to fix. The ice spell does not work  when jumping sometime
 **/
-function main () {
+
+/**
+June 8th submission:
+Understandbly considering this was the final submission I chose to transfer my code location to GitHub to make publishing to a website much simpler. 
+Therefore if you hope to find all of the code edits in prior submissions go to the original code pen where this was made: https://codepen.io/pierrelessard/pen/PoqRowz
+Otherwise the github repo link is: https://github.com/PierreLessard/WizardBattle_HighSchool_JavaScript
+The site where this code is being ran is: https://plessard.netlify.app/
+
+Few changes were made for the submission:
+Added instructions button
+Added how to play description
+Published to Netlify at: https://plessard.netlify.app/
+Added code readability by seperating sections of code into different files
+Removed the visible hitbox considering game is out of development
+
+Fixed Bugs:
+Fixed running and jump shooting bug where the spell would go straight up
+
+**/
+function main () { 
+
     var w11 = document.getElementById('w11')
     var w12 = document.getElementById('w12')
     var w13 = document.getElementById('w13')
@@ -191,15 +211,7 @@ function main () {
         this.x += this.xv // apply velocity changes
         this.y -= this.yv
       }
-  
-      draw({ctx}) { // function that draws the hit box
-        this.vel_update()
-        ctx.strokeStyle = 'black'
-        ctx.rect(this.x,this.y,this.l,this.h)
-        ctx.stroke();
-        ctx.beginPath(); // code bugs out if I take out this useless begin&stroke
-        ctx.stroke()
-      }
+
   
     }
   
@@ -219,9 +231,7 @@ function main () {
   
     game.addDrawing(function ({ctx,elapsed}) {
       ctx.fillStyle = 'white'
-      ctx.fillRect(0,0,rwall+50,floor+50)// draws the background
-      player1.draw({ctx})//draws the hitbox and also updates the velocity of each
-      player2.draw({ctx})
+      ctx.drawImage(background,0,0,rwall+50,floor+50)// draws the background
       if (first_time == 0) {
         player2.key_state[1] = false
         player1.key_state[2] = false

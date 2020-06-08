@@ -67,15 +67,12 @@ Added how to play description
 Published to Netlify at: https://plessard.netlify.app/
 Added code readability by seperating sections of code into different files
 Removed the visible hitbox considering game is out of development
-Added Default descisions for radio buttons
 
 Fixed Bugs:
 Fixed running and jump shooting bug where the spell would go straight up
-Fixed Background image link issues
 
 **/
-function main () { 
-
+function main () {
     var w11 = document.getElementById('w11')
     var w12 = document.getElementById('w12')
     var w13 = document.getElementById('w13')
@@ -233,6 +230,7 @@ function main () {
   
     game.addDrawing(function ({ctx,elapsed}) {
       ctx.fillStyle = 'white'
+      ctx.fillRect(0,0,rwall+50,floor+50)// draws the background
       if (first_time == 0) {
         player2.key_state[1] = false
         player1.key_state[2] = false

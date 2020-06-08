@@ -4,7 +4,20 @@
     <link rel="stylesheet" href="style.css">
     <body>
         <div class="text-block">
-          <h1>WIZARD BATTLE</h1>          
+          <h1>WIZARD BATTLE</h1> 
+
+          <button type="button" class="popup" onclick="popUpText()">Click me to toggle the popup!
+            <span class="popuptext" id="myPopup">A Simple Popup!</span>
+          </button> 
+          
+          <script>
+            // When the user clicks on div, open the popup
+            function popUpText() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+          </script>
+
           <form action="" method="post">
             Wizard 1's Power: <br>
           <input type="radio" name="wizard1" value="fire" id = 'w11'/> Fire

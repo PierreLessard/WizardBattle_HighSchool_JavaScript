@@ -231,7 +231,7 @@ function main () {
   
     game.addDrawing(function ({ctx,elapsed}) {
       ctx.fillStyle = 'white'
-      ctx.drawImage(background,0,0,rwall+50,floor+50)// draws the background
+      ctx.drawImage(background_src,0,0,rwall+50,floor+50)// draws the background
       if (first_time == 0) {
         player2.key_state[1] = false
         player1.key_state[2] = false

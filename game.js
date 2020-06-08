@@ -67,6 +67,7 @@ Added how to play description
 Published to Netlify at: https://plessard.netlify.app/
 Added code readability by seperating sections of code into different files
 Removed the visible hitbox considering game is out of development
+Added Default descisions for radio buttons
 
 Fixed Bugs:
 Fixed running and jump shooting bug where the spell would go straight up

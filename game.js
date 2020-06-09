@@ -211,6 +211,7 @@ function main () {
     }
 
     draw({ctx}) { // function that draws the hit box
+      this.vel_update()
       ctx.beginPath(); // code bugs out if I take out this useless begin&stroke
       ctx.stroke()
     }

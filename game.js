@@ -211,10 +211,6 @@ function main () {
     }
 
     draw({ctx}) { // function that draws the hit box
-      this.vel_update()
-      ctx.strokeStyle = 'black'
-      ctx.rect(this.x,this.y,this.l,this.h)
-      ctx.stroke();
       ctx.beginPath(); // code bugs out if I take out this useless begin&stroke
       ctx.stroke()
     }
